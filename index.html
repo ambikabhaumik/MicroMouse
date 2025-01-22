@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micromouse Maze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<noscript>
+  <h1>This website requires JavaScript to be enabled</h1>
+</noscript>
+<body>
+  <div>
+    <label>Rows: <input type="number" id="rows" value="10" min="5" max="50"></label>
+    <label>Columns: <input type="number" id="columns" value="10" min="5" max="50"></label>
+    <button id="generateEmptyMaze">Generate Empty Maze</button>
+    <label>Randomized Obstacles Density (%): <input type="number" id="density" value="30" min="0" max="100"></label>
+  </div>
+  <div>
+    <button id="generateRandomMaze" disabled>Generate Randomized Maze (based on the density) </button>
+    <div>
+      <label class="switch">
+        <input type="checkbox" id="toggleObstacleMode" disabled>
+        <span class="slider"></span>
+      </label>
+      <span>Custom Obstacle Mode</span>
+    </div>
+  <div>
+  </div>
+  </div>
+  <div>
+    <button id="setStart" disabled>Set Start</button>
+    <button id="setEnd" disabled>Set End</button>
+  </div>
+  <div id="maze"></div>
+  <div>
+    <button id="simulate" disabled>Simulate Micromouse</button>
+    <button id="clearMaze" disabled>Clear Maze</button>
+  </div>
+  <div>Instructions:</div>
+  <div id="instructions">
+    <p>1. Click on the "Generate Empty Maze" button to generate an empty maze.</p>
+    <p>2.  (a)Click on the "Generate Randomized Maze" button to generate a maze with random obstacles based on the density. or 
+    (b) Click on the "Custom Obstacle Mode" button to toggle the custom obstacle mode. In this mode, you can click on the cells to add or remove obstacles.</p>
+    <p>3. If the  "Custom Obstacle Mode" button is on switch it off . After that you can set the start and end</p>
+    <p>4. Click on the "Simulate Micromouse" button to simulate the micromouse in the maze.</p>
+    <p>5. Click on the "Clear Maze" button to clear the maze.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

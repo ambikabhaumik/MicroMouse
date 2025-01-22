@@ -1,0 +1,134 @@
+*{
+    margin: 1px;
+  }
+  body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      align-items: center;
+      margin: 20px;
+    }
+    
+    label {
+      margin: 0 10px;
+    }
+    
+    #maze {
+      display: grid;
+      gap: 2px;
+      margin: 20px auto;
+      width: fit-content;
+    }
+    
+    .cell {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 30px;
+      font-weight: normal;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .cell span{
+      font-size: 12px;
+      color: black;
+    }
+  
+    .cell.empty {
+      background-color: #f9f9f9;
+    }
+    
+    .cell.obstacle {
+      background-color: #555;
+    }
+    
+    .cell.start {
+      background-color: #4caf50;
+      color: white;
+    }
+    
+    .cell.destination {
+      background-color: #f44336;
+      color: white;
+    }
+    
+    .cell.path {
+      
+      background-color: #00bcd4;
+      color: black;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .cell:hover {
+      border: 1px solid #000;
+    }
+  
+    .instructions {
+      display: flex;
+      align-items: start;
+      margin: 20px auto;
+      width: 50%;
+    }
+  
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  
+    /* Toggle Switch Style */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #4caf50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
